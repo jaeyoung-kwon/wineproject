@@ -1,0 +1,17 @@
+.Buttonsss {
+  display: flex;
+  height: 650px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./wine3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 650px;
+}
+
+.Buttonss {
+  display: flex;
+  font-size: 28px;
+  margin: 40px;
+  background-color: blue;
+}
