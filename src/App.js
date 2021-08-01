@@ -33,6 +33,7 @@ class App extends Component{
         }.bind(this)}></Example>
         {_article1}
         {_article2}
+        <Test></Test>
       </div>
     );
   }

@@ -148,10 +148,7 @@ class HorizontalScroll extends Component {
     } = this.state;
 
     const menu = this.menuItems;
-
-    const checkboxStyle = {
-      margin: "5px 10px"
-    };
+    
     const valueStyle = {
       margin: "5px 10px",
       display: "inline-block"

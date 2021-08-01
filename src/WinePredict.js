@@ -18,23 +18,32 @@ const WinePredict = () => {
     var obj3 = document.getElementsByName("checkwhen");
     if(id < 4) {
       for(var i = 0; i < obj1.length; i++) {
+        var newChecked = null;
         if(obj1[i].id !== id && obj1[i].checked) {
           obj1[i].checked = false;
-          console.log(obj1[i].id);
+          newChecked = checkedInputs.filter(el => el !== obj1[i].id);
+        } else if(obj1[i].id === id && obj1[i].checked) {
+          setCheckedInputs([id]);
         }
       }
     } else if(id > 3 && id < 8) {
       for(var i = 0; i < obj2.length; i++) {
+        var newChecked = null;
         if(obj2[i].id !== id && obj2[i].checked) {
           obj2[i].checked = false;
-          console.log(obj2[i].id);
+          setCheckedInputs(checkedInputs.filter(el => el !== obj2[i].id));
+        } else if(obj2[i].id === id && obj2[i].checked) {
+          setCheckedInputs([id]);
         }
       }
     } else if(id > 7) {
       for(var i = 0; i < obj3.length; i++) {
+        var newChecked = null;
         if(obj3[i].id !== id && obj3[i].checked) {
           obj3[i].checked = false;
-          console.log(obj3[i].id);
+          setCheckedInputs(checkedInputs.filter(el => el !== obj3[i].id));
+        } else if(obj3[i].id === id && obj3[i].checked) {
+          setCheckedInputs([id]);
         }
       }
     }
