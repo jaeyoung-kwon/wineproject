@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 
-const WinePredict = () => {
+const Test = () => {
   const [checkedInputs, setCheckedInputs] = useState([]);
 
     // if (checked) {
@@ -39,15 +39,14 @@ const WinePredict = () => {
       }
     }
   }
-  return (
+  return(
     <article>
-      <form className="flex flex-col" action="/predict" method="post"
+      <form action="/predict" method="post"
         onSubmit={function(e){
           e.preventDefault();
-          console.log(checkedInputs)
         }.bind(this)}
       >
-        <header >
+        <header>
           <h1 className="flex items-center justify-center font-medium">와인 추천</h1>
           <h2 className="flex items-center justify-center font-medium">세가지의 설문을 통해서 고객님에 맞는 와인을 추천해 드립니다.</h2>
         </header>
@@ -135,64 +134,7 @@ const WinePredict = () => {
         </lastarticle>
       </form>
     </article>
-  )
+  );
 }
 
-// class WinePredict extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       check:{}
-//     }
-//   }
-//   render() {
-//     return(
-//       <article>
-//         <form action="/predict" method="post"
-//           onSubmit={function(e){
-//             e.preventDefault();
-//             this.props.onSubmit(
-//               e.target.title.value,
-//               e.target.desc.value
-//             )
-//           }.bind(this)}
-//         >
-//           <h1>와인 추천</h1>
-//           <h2>세가지의 설문을 통해서 고객님에 맞는 와인을 추천해 드립니다.</h2>
-//           <h3>와인을 드시는 시간은 언제인가요?</h3>
-//           <firstarticle>
-//             <input type="checkbox" />
-//             <h4>아침</h4>
-//             <input key="" type="checkbox" />
-//             <h4>점심</h4>
-//             <input key="" type="checkbox" />
-//             <h4>저녁</h4>
-//           </firstarticle>
-//           <secondarticle>
-//             <h3>누구와 함께 드시나요?</h3>
-//             <input key="" type="checkbox" />
-//             <h4>나홀로</h4>
-//             <input key="" type="checkbox" />
-//             <h4>연인과</h4>
-//             <input key="" type="checkbox" />
-//             <h4>친구와</h4>
-//             <input key="" type="checkbox" />
-//             <h4>가족과</h4>
-//           </secondarticle>
-//           <thirdarticle>
-//             <h3>와인을 어떨때 드시나요?</h3>
-//             <input key="" type="checkbox" />
-//             <h4>행복할 때</h4>
-//             <input key="" type="checkbox" />
-//             <h4>점심</h4>
-//             <input key="" type="checkbox" />
-//             <h4>저녁</h4>
-//           </thirdarticle>
-//           <input type="submit"></input>
-//         </form>
-//       </article>
-//     );
-//   }
-// }
-
-export default WinePredict;
+export default Test
