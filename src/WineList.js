@@ -55,7 +55,7 @@ class WineList extends Component {
 
                 <div className="col-lg-4 col-md-6 mb-4">
                   <div className="card h-100">
-                    <article className="flex flex-row justify-between p-1 absolute text-blue-600">
+                    <article className="flex flex-row justify-between p-1 absolute">
                       <h5 className="w-28 text-left px-1">프랑스</h5>
                       <h5 className="w-32 text-right">스파클링</h5>
                     </article>
@@ -75,7 +75,7 @@ class WineList extends Component {
 
                 <div className="col-lg-4 col-md-6 mb-4">
                   <div className="card h-100">
-                    <article className="flex flex-row justify-between p-1 absolute text-blue-600">
+                    <article className="flex flex-row justify-between p-1 absolute">
                       <h5 className="w-28 text-left px-1">프랑스</h5>
                       <h5 className="w-32 text-right">로제</h5>
                     </article>
@@ -95,7 +95,7 @@ class WineList extends Component {
 
                 <div className="col-lg-4 col-md-6 mb-4">
                   <div className="card h-100">
-                    <article className="flex flex-row justify-between p-1 absolute text-blue-600">
+                    <article className="flex flex-row justify-between p-1 absolute">
                       <h5 className="w-28 text-left px-1">이탈리아</h5>
                       <h5 className="w-32 text-right">레드</h5>
                     </article>
@@ -115,7 +115,7 @@ class WineList extends Component {
 
                 <div className="col-lg-4 col-md-6 mb-4">
                   <div className="card h-100">
-                    <article className="flex flex-row justify-between p-1 absolute text-blue-600">
+                    <article className="flex flex-row justify-between p-1 absolute">
                       <h5 className="w-28 text-left px-1">미국</h5>
                       <h5 className="w-32 text-right">레드</h5>
                     </article>
@@ -135,7 +135,7 @@ class WineList extends Component {
 
                 <div className="col-lg-4 col-md-6 mb-4">
                   <div className="card h-100">
-                    <article className="flex flex-row justify-between p-1 absolute text-blue-600">
+                    <article className="flex flex-row justify-between p-1 absolute">
                       <h5 className="w-28 text-left px-1">호주</h5>
                       <h5 className="w-32 text-right">레드</h5>
                     </article>
@@ -155,7 +155,7 @@ class WineList extends Component {
 
                 <div className="col-lg-4 col-md-6 mb-4">
                   <div className="card h-100">
-                    <article className="flex flex-row justify-between p-1 absolute text-blue-600">
+                    <article className="flex flex-row justify-between p-1 absolute">
                       <h5 className="w-28 text-left px-1">스페인</h5>
                       <h5 className="w-32 text-right">레드</h5>
                     </article>
