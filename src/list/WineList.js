@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './WineList.css';
-import logo from './wine5.jpg';
+import logo from '../image/wine3.png';
 
 
 class WineList extends Component {
@@ -13,11 +13,11 @@ class WineList extends Component {
 
             <div className="col-lg-3">
 
-              <h1 className="my-4">Shop Name</h1>
+              <h1 className="my-4">Wainary Shop</h1>
               <div className="list-group">
-                <a href="#" className="list-group-item">Category 1</a>
-                <a href="#" className="list-group-item">Category 2</a>
-                <a href="#" className="list-group-item">Category 3</a>
+                <a href="#" className="list-group-item">프랑스</a>
+                <a href="#" className="list-group-item">이탈리아</a>
+                <a href="#" className="list-group-item">스페인</a>
               </div>
 
             </div>
@@ -32,7 +32,7 @@ class WineList extends Component {
                 </ol>
                 <div className="carousel-inner" role="listbox">
                   <div className="carousel-item active">
-                    <img className="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide" />
+                    <img className="d-block img-fluid w-full" src={logo} alt="First slide" />
                   </div>
                   <div className="carousel-item">
                     <img className="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide" />
@@ -65,7 +65,6 @@ class WineList extends Component {
                         <a href="#">드 샹세니, 소뮈르 브뤼</a>
                       </h4>
                       <h5>30,000원</h5>
-                      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                     </div>
                     <div className="card-footer">
                       <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -85,7 +84,6 @@ class WineList extends Component {
                         <a href="#">에스탕동 제니스</a>
                       </h4>
                       <h5>25,000원</h5>
-                      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div className="card-footer">
                       <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -105,7 +103,6 @@ class WineList extends Component {
                         <a href="#">로르나노, 키안티 클라시코</a>
                       </h4>
                       <h5>45,000원</h5>
-                      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                     </div>
                     <div className="card-footer">
                       <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -125,7 +122,6 @@ class WineList extends Component {
                         <a href="#">라 크레마 몬터레이 피노누아</a>
                       </h4>
                       <h5>82,000원</h5>
-                      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                     </div>
                     <div className="card-footer">
                       <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -145,7 +141,6 @@ class WineList extends Component {
                         <a href="#">울프 블라스, 헤리티지 릴리즈</a>
                       </h4>
                       <h5>26,000원</h5>
-                      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div className="card-footer">
                       <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -165,7 +160,6 @@ class WineList extends Component {
                         <a href="#">페드라롱가, 도우미아</a>
                       </h4>
                       <h5>88,000원</h5>
-                      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                     </div>
                     <div className="card-footer">
                       <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -181,14 +175,12 @@ class WineList extends Component {
 
         </div>
 
-        <footer class="py-5 bg-dark">
+        <footer class="py-4 bg-dark">
           <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p>
           </div>
         </footer>
 
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
       </body>
     );

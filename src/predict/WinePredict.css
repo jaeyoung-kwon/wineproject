@@ -1,0 +1,14 @@
+.full {
+  background-image: url(../image/wine2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 50px 240px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  border: 10px solid black;
+  border-radius: 70px;
+  background-color: white;
+}

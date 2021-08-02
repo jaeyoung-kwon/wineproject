@@ -3,7 +3,7 @@
   height: 900px;
   flex-direction: column;
   align-items: center;
-  background-image: url(./wine5.jpg);
+  background-image: url(../image/wine5.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
 }

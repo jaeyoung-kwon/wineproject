@@ -16,7 +16,7 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
-import logo from './logo.png'
+import logo from '../image/logo.png'
 
 const solutions = [
   {

@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
-import Example from './Bar';
-import Buttons from './Buttons';
-import WinePredict from './WinePredict';
-import WineList from './WineList';
-import HorizontalScroll from './HorizontalScroll';
-import Test from './test';
+import Example from './main/Bar';
+import Buttons from './main/Buttons';
+import WinePredict from './predict/WinePredict';
+import WineList from './list/WineList';
 
 class App extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      mode: 'list'
+      mode: 'welcome'
     }
   }
   render() {
@@ -31,7 +28,6 @@ class App extends Component{
           this.setState({mode:'welcome'});
         }.bind(this)}></Example>
         {_article}
-        <Test></Test>
       </div>
     );
   }
