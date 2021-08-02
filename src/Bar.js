@@ -74,7 +74,7 @@ function classNames(...classes) {
 class Example extends Component {
   render() {
     return (
-      <Popover className="relative bg-red-900">
+      <Popover className="relative bg-red-800">
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6">

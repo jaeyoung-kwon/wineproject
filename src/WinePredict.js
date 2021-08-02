@@ -49,8 +49,8 @@ const WinePredict = () => {
     }
   }
   return (
-    <article>
-      <form className="flex flex-col" action="/predict" method="post"
+    <article className="bg-red-900 h-screen">
+      <form className="flex flex-col text-white" action="/predict" method="post"
         onSubmit={function(e){
           e.preventDefault();
           console.log(checkedInputs)
@@ -140,7 +140,7 @@ const WinePredict = () => {
           <h4>저녁</h4>
         </thirdarticle>
         <lastarticle className="flex items-center justify-center py-4">
-          <input type="submit" ></input>
+          <input type="submit" className="bg-black"></input>
         </lastarticle>
       </form>
     </article>
