@@ -78,12 +78,12 @@ class Example extends Component {
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-                <div className="flex justify-start lg:w-0 lg:flex-1">
+              <div className="flex justify-between items-center md:justify-start md:space-x-10">
+                <div className="flex justify-start items-center lg:w-0 lg:flex-1 justify-center h-20">
                   <a href="#">
                     <span className="sr-only">Workflow</span>
                     <img
-                      className="h-8 w-auto sm:h-10"
+                      className="h-8 w-auto sm:h-16"
                       src={logo}
                       alt=""
                       onClick={function(e){
@@ -93,13 +93,7 @@ class Example extends Component {
                     />
                   </a>
                 </div>
-                <div className="-mr-2 -my-2 md:hidden">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                    <span className="sr-only">Open menu</span>
-                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
-                <form action="/" method="get" className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-white rounded-md shadow-sm text-base font-medium bg-white">
+                <form action="/" method="get" className="ml-8 my-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-white rounded-md shadow-sm text-base font-medium bg-white">
                   <input
                     type="text"
                     id="header-search"
@@ -115,7 +109,7 @@ class Example extends Component {
                   </a>
                   <a
                     href="#"
-                    className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-white rounded-xl shadow-sm text-base font-medium text-white hover:bg-black"
                   >
                     회원가입
                   </a>

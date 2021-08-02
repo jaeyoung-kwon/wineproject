@@ -11,28 +11,26 @@ class App extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      mode: 'predict'
+      mode: 'welcome'
     }
   }
   render() {
-    var _article1, _article2 = null;
+    var  _article = null;
     if(this.state.mode === 'welcome') {
-      _article1 = <HorizontalScroll></HorizontalScroll>
-      _article2 = <Buttons onChangeMode={function(_mode){
+      _article = <Buttons onChangeMode={function(_mode){
         this.setState({mode:_mode})
       }.bind(this)}></Buttons>
     } else if(this.state.mode === 'predict') {
-      _article2 = <WinePredict></WinePredict>
+      _article = <WinePredict></WinePredict>
     } else if(this.state.mode === 'list') {
-      _article2 = <WineList></WineList>
+      _article = <WineList></WineList>
     }
     return (
       <div className="Buttond">
         <Example onChangeMode={function(){
           this.setState({mode:'welcome'});
         }.bind(this)}></Example>
-        {_article1}
-        {_article2}
+        {_article}
         <Test></Test>
       </div>
     );

@@ -4,42 +4,34 @@ import ScrollMenu from "react-horizontal-scrolling-menu";
 import "./Horizontal.css";
 
 let list = [
-  { name: "item1" },
-  { name: "item2" },
-  { name: "item3" },
-  { name: "item4" },
-  { name: "item5" },
-  { name: "item6" },
-  { name: "item7" },
-  { name: "item8" },
-  { name: "item9" },
-  { name: "item10" },
-  { name: "item11" },
-  { name: "item12" },
-  { name: "item13" },
-  { name: "item14" },
-  { name: "item15" },
-  { name: "item16" },
-  { name: "item17" },
-  { name: "item18" },
-  { name: "item19" },
-  { name: "item20" },
-  { name: "item21" },
-  { name: "item22" },
-  { name: "item23" },
-  { name: "item24" },
-  { name: "item25" }
+  { id: 168945, name: "사티스 데이 틴토", link: "https://wine21.speedgabia.com/WINE_MST/TITLE/0168000/W0168945.png" },
+  { id: 168942, name: "드 샹세니_소뮈르 브뤼", link: "https://wine21.speedgabia.com/WINE_MST/TITLE/0168000/W0168942.png" },
+  { id: 168939, name: "에스탕동 제니스", link: "https://wine21.speedgabia.com/WINE_MST/TITLE/0168000/W0168939.png" },
+  { id: 168933, name: "로르나노_키안티 클라시코", link: "https://wine21.speedgabia.com/WINE_MST/TITLE/0168000/W0168933.png" },
+  { id: 168932, name: "오린 스위프트_슬렌더", link: "https://wine21.speedgabia.com/WINE_MST/TITLE/0168000/W0168932.png" },
+  { id: 168926, name: "라 크레마 몬터레이 피노누아", link: "https://wine21.speedgabia.com/WINE_MST/TITLE/0168000/W0168926.png" },
+  { id: 168921, name: "울프 블라스_헤리티지 릴리즈", link: "https://wine21.speedgabia.com/WINE_MST/TITLE/0168000/W0168921.png" },
+  { id: 168919, name: "페드라롱가_도우미아", link: "https://wine21.speedgabia.com/WINE_MST/IMAGE/0168000/T0168919_001.png" },
+  { id: 168918, name: "울프 블라스_더 마스터", link: "https://wine21.speedgabia.com/WINE_MST/IMAGE/0168000/T0168918_001.png" },
+  { id: 168904, name: "라스 모라다스_라스 루체스", link: "https://wine21.speedgabia.com/WINE_MST/IMAGE/0168000/T0168904_001.png" }
 ];
 
-const MenuItem = ({ text, selected }) => {
-  return <div className={`menu-item ${selected ? "active" : ""}`}>{text}</div>;
+const MenuItem = ({ ima, text, selected }) => {
+  return(
+    <div className={`menu-item-w ${selected ? "active" : ""}`}>
+      <div className={`menu-item ${selected ? "active" : ""}`}>{text}</div>
+      <img className={`menu-image ${selected ? "active" : ""}`} src={ima}></img>
+    </div>
+  );
 };
 
 export const Menu = (list, selected) =>
   list.map(el => {
-    const { name } = el;
+    const { name, link } = el;
 
-    return <MenuItem text={name} key={name} selected={selected} />;
+    return (
+      <MenuItem ima={link} text={name} key={name} selected={selected} />
+    );
   });
 
 const Arrow = ({ text, className }) => {
@@ -56,7 +48,7 @@ export const ArrowRight = Arrow({ text: ">", className: "arrow-next" });
 class HorizontalScroll extends Component {
   state = {
     alignCenter: true,
-    clickWhenDrag: false,
+    clickWhenDrag: true,
     dragging: true,
     hideArrows: true,
     hideSingleArrow: true,
@@ -64,8 +56,8 @@ class HorizontalScroll extends Component {
     scrollToSelected: false,
     selected: "item1",
     translate: 0,
-    transition: 0.3,
-    wheel: true
+    transition: 0.5,
+    wheel: true,
   };
 
   constructor(props) {
@@ -74,23 +66,13 @@ class HorizontalScroll extends Component {
     this.menuItems = Menu(list.slice(0, list.length), this.state.selected);
   }
 
-  onFirstItemVisible = () => {
-    console.log("first item is visible");
-  };
+  // onFirstItemVisible = () => {
+  //   console.log("first item is visible");
+  // };
 
-  onLastItemVisible = () => {
-    console.log("last item is visible");
-
-    const newItems = Array(5)
-      .fill(1)
-      .map((el, ind) => ({ name: `item${list.length + ind + 1}` }));
-    list = list.concat(newItems);
-    this.menuItems = Menu(list, list.slice(-1)[0].name);
-    this.setState({
-      itemsCount: list.length,
-      selected: this.state.selected
-    });
-  };
+  // onLastItemVisible = () => {
+  //   console.log("last item is visible");
+  // };
 
   onUpdate = ({ translate }) => {
     console.log(`onUpdate: translate: ${translate}`);
@@ -181,7 +163,7 @@ class HorizontalScroll extends Component {
           wheel={wheel}
         />
 
-        <form className="properties">
+        {/* <form className="properties">
           <label style={valueStyle}>
             Selected:
             <input
@@ -192,7 +174,7 @@ class HorizontalScroll extends Component {
               onChange={this.setSelected}
             />
           </label>
-        </form>
+        </form> */}
       </div>
     );
   }
